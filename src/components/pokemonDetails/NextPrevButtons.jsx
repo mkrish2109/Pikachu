@@ -20,7 +20,7 @@ function NextPrevButtons(props) {
             setName(1025);
           }
         }}>
-        <i class="fa-solid fa-chevron-left" style={{ padding: "8px" }}></i>
+        <i className="fa-solid fa-chevron-left" style={{ padding: "8px" }}></i>
         Previous
       </button>
       <button
@@ -34,7 +34,7 @@ function NextPrevButtons(props) {
           }
         }}>
         Next
-        <i class="fa-solid fa-chevron-right" style={{ padding: "8px" }}></i>
+        <i className="fa-solid fa-chevron-right" style={{ padding: "8px" }}></i>
       </button>
     </div>
   );

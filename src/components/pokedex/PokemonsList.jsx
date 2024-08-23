@@ -12,12 +12,13 @@ function PokemonsList(props) {
   return (
     <div style={{ padding: "4px 32px" }}>
       <div style={gridStyles}>
-        {props.data.map(function (pokemon) {
+        {props.data.map(function (pokemon, index) {
           return (
             <PokemonCard
               name={pokemon.name}
               image={pokemon.sprites.other["official-artwork"].front_default}
               id={pokemon.id}
+              key={index}
               tags={pokemon.types.map(function (type) {
                 return type.type.name;
               })}

@@ -36,7 +36,7 @@ function PaginationButons(props) {
           handlePrevClick
           // setPage(page);
         }>
-        <i class="fa-solid fa-chevron-left"></i>
+        <i className="fa-solid fa-chevron-left"></i>
       </button>
       <div style={{ display: "flex", gap: "5px" }}>
         <button
@@ -76,7 +76,7 @@ function PaginationButons(props) {
           color: "black",
         }}
         onClick={handleNextClick}>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i className="fa-solid fa-chevron-right"></i>
       </button>
     </div>
   );
