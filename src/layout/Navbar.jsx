@@ -1,58 +1,27 @@
 import React from "react";
-import styles from "../styles/layouts/navbar.module.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navbar() {
+  const links = [
+    { name: "Home", to: "/" },
+    { name: "Pokedex", to: "/pokedex" },
+  ];
+
   return (
-    <div className={styles.container}>
+    <div className="flex justify-between items-center px-8 py-4 bg-[#78a083] text-white">
       <div>
-        <h1>Pokedex</h1>
+        <Link to="/">
+          <h1 className="text-xl font-bold tracking-wide">Pokedex</h1>
+        </Link>
       </div>
-      <ul className={styles.links}>
-        <li className={styles.navLink}>
-          <NavLink
-            to="/"
-            style={{ color: "white" }}
-            className={({ isActive }) => {
-              console.log("isActive", isActive);
-              return isActive ? styles.activePage : "";
-            }}>
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/pokedex"
-            style={{ color: "white", textDecoration: "none" }}
-            className={({ isActive }) => {
-              console.log("isActive", isActive);
-              return isActive ? styles.activePage : "";
-            }}>
-            Pokedex
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/about"
-            style={{ color: "white", textDecoration: "none" }}
-            className={({ isActive }) => {
-              console.log("isActive", isActive);
-              return isActive ? styles.activePage : "";
-            }}>
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            style={{ color: "white", textDecoration: "none" }}
-            className={({ isActive }) => {
-              console.log("isActive", isActive);
-              return isActive ? styles.activePage : "";
-            }}>
-            Contact
-          </NavLink>
-        </li>
+      <ul className="flex m-0 p-0 list-none gap-4 cursor-pointer">
+        {links.map((value) => {
+          return (
+            <li className="list-none text-lg font-semibold hover:text-[#2d3e47]">
+              <Link to={value.to}>{value.name}</Link>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

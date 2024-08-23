@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,6 +19,5 @@ button {
   color: white;
   cursor: pointer;
 }
-button:hover {
-  background-color: #c62828;
-}
+
+

@@ -4,7 +4,7 @@ import DetailsTable from "./DetailsTable";
 function Details(props) {
   const { description, height, weight, abilities } = props;
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+    <div className="grid grid-rows-2">
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum,
         quae culpa rerum sequi consequuntur hic nostrum illo temporibus quam

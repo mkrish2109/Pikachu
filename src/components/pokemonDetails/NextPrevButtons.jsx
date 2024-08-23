@@ -3,15 +3,9 @@ import React from "react";
 function NextPrevButtons(props) {
   const { number, setName } = props;
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-around",
-        // gap: "16px",
-        padding: "16px 64px",
-      }}>
+    <div className="flex justify-content-around px-16 py-4 ">
       <button
-        style={{ background: "blue", width: "128px" }}
+        className="bg-blue-700 w-32 max-sm:w-20"
         title="Previous"
         onClick={() => {
           if (number > 1) {
@@ -24,7 +18,7 @@ function NextPrevButtons(props) {
         Previous
       </button>
       <button
-        style={{ background: "red", width: "128px" }}
+        className="bg-red-600  w-32 max-sm:w-20"
         title="Next"
         onClick={() => {
           if (number < 1025) {

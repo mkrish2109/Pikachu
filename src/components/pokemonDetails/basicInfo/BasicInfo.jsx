@@ -3,9 +3,7 @@ import Title from "./Title";
 import Image from "./Image";
 import Details from "./Details";
 
-function BasicInfo(props) {
-  const { data } = props;
-
+function BasicInfo({ data }) {
   if (!data) return null;
 
   const {
@@ -23,7 +21,7 @@ function BasicInfo(props) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
       <Title id={id} name={name} />
-      <div style={{ display: "flex", width: "70%", margin: "auto" }}>
+      <div className="grid grid-cols-2 px-[50px] md:grid-cols-2 max-sm:grid-cols-1">
         <Image name={name} img={front_default} />
         <Details height={height} weight={weight} abilities={abilities} />
       </div>

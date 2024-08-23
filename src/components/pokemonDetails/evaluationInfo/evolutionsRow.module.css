@@ -1,0 +1,25 @@
+.containerMain {
+  padding: 32px;
+  background-color: #e3e7e2;
+}
+
+.title {
+  margin-bottom: 32px;
+  color: black;
+  text-align: center;
+}
+
+.containerInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .containerMain {
+    grid-template-columns: 1fr;
+  }
+}
