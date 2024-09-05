@@ -27,7 +27,7 @@ function Pokedex() {
     <div style={{ backgroundColor: "#CCD3CA" }}>
       <SearchBar
         setQuery={setQuery}
-        setSearchedData={setSearchedData} 
+        setSearchedData={setSearchedData}
         query={query}
       />
       {searchedData && query ? (
